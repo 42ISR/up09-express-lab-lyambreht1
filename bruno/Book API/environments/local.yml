@@ -1,0 +1,9 @@
+name: local
+color: "#B491E5"
+variables:
+  - name: baseUrl
+    value: http://localhost:3000
+    description: ""
+  - name: token
+    value: ""
+    description: ""
