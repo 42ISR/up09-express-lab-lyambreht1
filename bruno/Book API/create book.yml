@@ -1,0 +1,28 @@
+info:
+  name: create book
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/books"
+  body:
+    type: json
+    data: |-
+      {
+        "title": "Новая книга",
+        "author": "Иван Иванов",
+        "year": 2024,
+        "genre": "Фантастика",
+        "description": "Описание новой книги"
+      }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzkxNDUwMzQxLCJleHAiOjE3OTIwNTUxNDF9.PGAXo9BLcx_65lPaR0IOewNjidUv6thVXfyaD_IraLc
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

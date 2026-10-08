@@ -1,0 +1,24 @@
+info:
+  name: update book
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{baseUrl}}/api/books/6"
+  body:
+    type: json
+    data: |-
+      {
+        "title": "Обновлённое название"
+      }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzkxNDUwMzQxLCJleHAiOjE3OTIwNTUxNDF9.PGAXo9BLcx_65lPaR0IOewNjidUv6thVXfyaD_IraLc
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
